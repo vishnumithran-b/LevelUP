@@ -16,11 +16,13 @@ client/.env
 !.env.example
 !**/.env.example
 
-# Production build outputs
+# Production build outputs & local caches
 dist/
 build/
 client/dist/
 server/dist/
+.vite/
+client/.vite/
 
 # Logs
 *.log
