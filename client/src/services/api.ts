@@ -9,7 +9,9 @@ import {
   ProjectEvaluationResult 
 } from '../types.js';
 
-const API_BASE = '/api';
+const API_BASE = typeof window !== 'undefined'
+  ? '/api'
+  : ((typeof process !== 'undefined' && (process.env?.SERVER_URL || process.env?.VITE_SERVER_URL)) || 'http://localhost:5001') + '/api';
 
 export const api = {
   // Auth
